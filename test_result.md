@@ -210,11 +210,10 @@ metadata:
 
 test_plan:
   current_focus:
-    - "OpenAI GPT-4o Integration"
-    - "Loan Application Submission Endpoint"
     - "Business Loan Application Form"
     - "AI Results Dashboard"
-  stuck_tasks: []
+  stuck_tasks:
+    - "OpenAI GPT-4o Integration"
   test_all: false
   test_priority: "high_first"
 
