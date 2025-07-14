@@ -158,14 +158,14 @@ class BackendTester:
                 is_fallback = any(indicator in ai_analysis for indicator in fallback_indicators)
                 
                 if is_fallback:
-                    self.log_test("OpenAI GPT-4o Integration", False, 
+                    self.log_test("OpenAI GPT-3.5-turbo Integration", False, 
                                 f"AI analysis appears to be fallback response: {ai_analysis}")
                     return False
                 
                 # Check for structured analysis components
                 if len(ai_analysis) < 50:
-                    self.log_test("OpenAI GPT-4o Integration", False, 
-                                f"AI analysis too short, likely not from GPT-4o: {ai_analysis}")
+                    self.log_test("OpenAI GPT-3.5-turbo Integration", False, 
+                                f"AI analysis too short, likely not from GPT-3.5-turbo: {ai_analysis}")
                     return False
                 
                 # Check if we have additional AI fields
@@ -173,11 +173,11 @@ class BackendTester:
                 ai_field_count = sum(1 for field in ai_fields if field in data and data[field])
                 
                 if ai_field_count >= 2:
-                    self.log_test("OpenAI GPT-4o Integration", True, 
+                    self.log_test("OpenAI GPT-3.5-turbo Integration", True, 
                                 f"AI analysis appears comprehensive with {ai_field_count} additional fields")
                     return True
                 else:
-                    self.log_test("OpenAI GPT-4o Integration", False, 
+                    self.log_test("OpenAI GPT-3.5-turbo Integration", False, 
                                 f"AI analysis lacks comprehensive structure, only {ai_field_count} additional fields found")
                     return False
                     
