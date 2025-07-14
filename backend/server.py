@@ -169,7 +169,7 @@ async def analyze_loan_application_with_ai(application: BusinessApplication) -> 
             api_key=OPENAI_API_KEY,
             session_id=session_id,
             system_message=system_message
-        ).with_model("openai", "gpt-4o")
+        ).with_model("openai", "gpt-3.5-turbo")
         
         # Send message to GPT-4o
         user_message = UserMessage(text=user_message_text)
