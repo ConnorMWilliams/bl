@@ -28,7 +28,7 @@ client = AsyncIOMotorClient(MONGO_URL)
 db = client[DB_NAME]
 
 # OpenAI API configuration
-OPENAI_API_KEY = "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"
+OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY')
 
 # Pydantic models
 class BusinessApplication(BaseModel):
