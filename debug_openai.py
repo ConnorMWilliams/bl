@@ -19,7 +19,7 @@ async def test_openai():
             api_key=api_key,
             session_id=session_id,
             system_message=system_message
-        ).with_model("openai", "gpt-4o-mini")
+        ).with_model("openai", "gpt-3.5-turbo")
         
         user_message = UserMessage(text="Hello, this is a test.")
         response = await chat.send_message(user_message)
