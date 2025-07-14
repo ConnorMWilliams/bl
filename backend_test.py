@@ -182,7 +182,7 @@ class BackendTester:
                     return False
                     
             else:
-                self.log_test("OpenAI GPT-4o Integration", False, 
+                self.log_test("OpenAI GPT-3.5-turbo Integration", False, 
                             f"Failed to get response for AI analysis test: HTTP {response.status_code}")
                 return False
                 
