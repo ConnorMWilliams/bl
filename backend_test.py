@@ -135,7 +135,7 @@ class BackendTester:
             return False
 
     def test_openai_integration(self):
-        """Test OpenAI GPT-4o integration by analyzing the AI response quality"""
+        """Test OpenAI GPT-3.5-turbo integration by analyzing the AI response quality"""
         try:
             response = requests.post(
                 f"{self.base_url}/submit-application",
